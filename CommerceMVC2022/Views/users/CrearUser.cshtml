@@ -1,0 +1,27 @@
+﻿@model CommerceMVC2022.Models.ViewModels.AlterUserViewModel
+
+@{
+    ViewBag.Title = "Crear un usuario";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using(Html.BeginForm("CrearUser", "users", FormMethod.Post))
+{
+<div class="row">
+    <div class="col-md-12">
+        @Html.LabelFor(d => d.Nombre)
+        @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(d => d.Nombre, null, new { @class = "help-block" })
+        @Html.LabelFor(d => d.Correo)
+        @Html.TextBoxFor(d => d.Correo, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.Correo, null, new { @class = "help-block" })
+        @Html.LabelFor(d => d.FechaNacimiento)
+        @Html.EditorFor(d => d.FechaNacimiento, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(d => d.FechaNacimiento, null, new { @class = "help-block" })*@
+    </div>
+        <div style="text-align:right;padding:5px">
+            <input type="submit" value="Guardar" class="btn btn-primary" />
+        </div>
+    </div>
+}

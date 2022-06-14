@@ -1,0 +1,31 @@
+﻿@model List<CommerceMVC2022.Models.ViewModels.UsersViewModel>
+
+@{
+    ViewBag.Title = "Users Information";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="text-align:right;padding:5px;">
+    <a href="~/Users/CrearUser" class="btn btn-primary">Nuevo</a>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-responsive">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+            </tr>
+            @foreach (var elemento in Model)
+            {
+                <tr>
+                    <th scope="row">@elemento.Id </th>
+                    <td> @elemento.Nombre </td>
+                    <td> @elemento.Correo </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
